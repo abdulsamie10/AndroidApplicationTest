@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Android Developer Test</string>
+    <string name="timeText">time</string>
+    <string name="dayText">Day</string>
+    <string name="dateText">Date</string>
+</resources>

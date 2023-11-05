@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="weatherClr">#9E8AB5</color>
+    <color name="backgroundClr">#BAD6EE</color>
+    <color name="viewClr">#DBD7EC</color>
+    <color name="timeClr">#7B5AA4</color>
+    <color name="dayClr">#08C3D6</color>
+    <color name="dateClr">#08C3D6</color>
+</resources>

@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val handler = Handler(Looper.getMainLooper())
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("dd MMMM, yyyy", Locale.getDefault())
         val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
         val dayFormat = SimpleDateFormat("EEEE", Locale.getDefault())
 
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateBackgroundColor() {
-        val colorResId = if (isDarkened) R.color.black else R.color.backgroundClr
+        val colorResId = if (isDarkened) R.color.black else R.color.viewClr
         val color = resources.getColor(colorResId)
         screenView.setBackgroundColor(color)
     }

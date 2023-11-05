@@ -10,35 +10,39 @@
 
     <View
         android:id="@+id/screenView"
-        android:layout_width="1000dp"
-        android:layout_height="480dp"
+        android:layout_width="@dimen/_413sdp"
+        android:layout_height="@dimen/_220sdp"
         android:background="@color/viewClr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
 
     <ImageView
         android:id="@+id/weatherIcon"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:src="@drawable/cloud"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="20dp"
-        android:elevation="8dp"
-        android:translationZ="4dp"
+        android:layout_margin="12dp"
         android:background="@drawable/weather_icon"
-        android:layout_margin="12dp"/>
+        android:elevation="8dp"
+        android:padding="20dp"
+        android:src="@drawable/cloud"
+        android:translationZ="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/powerIcon"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:layout_margin="12dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/power_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="12dp"
-        android:background="@drawable/power_icon"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/baseline_power_settings_new_24" />
 
     <ImageView
@@ -50,66 +54,62 @@
         android:layout_margin="12dp"
         app:srcCompat="@drawable/baseline_wifi_24" />
 
-    <RelativeLayout
-        android:layout_width="617dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/timeText"
+        android:textColor="@color/timeClr"
+        android:textSize="120dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/screenView"
         app:layout_constraintEnd_toStartOf="@+id/weatherIcon"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toEndOf="@+id/powerIcon"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/dayView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dateView"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/dayText"
+        android:textColor="@color/dayClr"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/dateView"
+        app:layout_constraintEnd_toStartOf="@+id/weatherIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/timeView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/timeView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="50dp"
-            android:text="@string/timeText"
-            android:textColor="@color/timeClr"
-            android:textSize="40dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/dayView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="29dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="150dp"
-            android:layout_toEndOf="@+id/timeView"
-            android:text="@string/dayText"
-            android:textColor="@color/dayClr"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/dateView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dayView"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="150dp"
-            android:layout_marginBottom="46dp"
-            android:layout_toEndOf="@+id/timeView"
-            android:text="@string/dateText"
-            android:textColor="@color/dateClr"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:text="@string/dateText"
+        android:textColor="@color/dateClr"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/screenView"
+        app:layout_constraintEnd_toStartOf="@+id/weatherIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/timeView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
